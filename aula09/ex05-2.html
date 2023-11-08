@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="1.0"> <!--Para atualizar as modificações em tempo real no navegador. Ou usar a extensão live server. obs: ambos atualizam a pagina a todo momento e qualquer alteração feita será mostrada.-->
-    <title>Segundos passos com DOM</title>
+    <title>Primeiros passos com DOM</title>
     <style>
         body{
             background-color: lightblue;
@@ -15,17 +15,19 @@
 </head>
 <body>
      <h1>Iniciando estudos com DOM</h1>
-     <p>Aqui vai o resultado</p>
+     <p class="p1">Aqui vai o resultado</p>
      <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-     <div>clique em mim</div>
+     <div id="msg">clique em mim</div>
 
      <script>
-        var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p') [1] // [] possição do paragráfo, sendo 0 == 1, 1 == 2, ...
-            window.document.write('Está escrito assim: ' + p1.innerText +'<br>')
-            window.document.write('Está escrito assim: ' + p1.innerHTML) //aqui mostra com a mesma formatação do html
-            corpo.style.background = 'gray'
-            p1.style.color = 'blue' //modifica a variável
+        var d = window.document.getElementById('msg')//Id
+        d.style.background = 'purple'
+        d.innerText = 'Aguardando ...'
+        /*Os tipos por nome (getElementsByName()) e por classe (getElementsByClassName()) funcionam da mesma forma que o tag name, por seram no plural, tem que usar o colchetes para saber qual o numero (ordem do elemento) está pegando*/
+
+        var p = window.document.querySelector('p.p1')//Seletor - usa sintese das CSS, ex: id = # / class = .
+        p.style.color = 'black'
+        p.style.background = 'white'
      </script>
 </body>
 </html>
