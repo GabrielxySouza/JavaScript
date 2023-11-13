@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 16px arial;
+            background-color: rgb(194, 17, 179);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+        Interaja...
+    </div>
+
+    <script>
+        //normalmente declaramos a var dentro das function pois podem acontecer problemas de escopo. Mas nesse exemplo deixaremos assim para não precisar ficar repetindo a var area = ...
+        var area = window.document.getElementById('area')
+        function clicar() {
+            area.innerText = 'Clicou!'
+            area.style.backgroundColor = 'grey'
+        }
+        function entrar(){
+            area.innerText = 'Entrou!'
+        }
+        function saiu(){
+            area.innerText = 'Saiu!'
+            area.style.backgroundColor = 'rgb(194, 17, 179)'
+        }
+    </script>
+</body>
+</html>
