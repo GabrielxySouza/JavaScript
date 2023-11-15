@@ -10,5 +10,5 @@ if(hora >= 0 && hora < 5) {
 }else if(hora < 24){
     console.log('Boa noite!')
 } else{
-     console.log('hora invalida')
+    console.log('hora inválida')
 }
