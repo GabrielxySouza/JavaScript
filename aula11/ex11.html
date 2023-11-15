@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Pesquisa de Nacionalidade</h1>
+    <label for="ipais">Em que país você vive?</label>
+    <input type="text" name="pais" id="ipais" placeholder="nome do país">
+    <input type="button" value="Nacionalidade" onclick="nacionalidade()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function nacionalidade(){
+            var nac  = window.document.getElementById('ipais')
+            var res = window.document.querySelector('div#res')
+            var nac = (nac.value)
+            if(nac == 'Brasil' || nac == 'brasil'){ //.value não serve apenas para números
+                res.innerHTML = `<p>Sua nacionalidade é <strong>brasileira!</strong> </p>`
+            } else{
+                res.innerHTML = `<p>Sua nacionalidade é <strong>estrangeira</strong>, Porque você mora em <strong>${nac}!</strong> </p>`
+            }
+        }
+
+        /*Também poderia ser feito:
+        if(nac.value == 'Brasil || nac.value == 'brasil')
+        para eliminar a linha var nac = (nac.value)
+        */
+    </script>
+</body>
+</html>
