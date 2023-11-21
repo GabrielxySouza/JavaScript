@@ -5,7 +5,7 @@
     padding: 0px;
 }
 
-body,html{
+body{
     background-color: lightskyblue;
     font: normal 1em Arial, sans-serif;
 }
@@ -19,8 +19,7 @@ section{
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    width: 450px;
-    height: 50vh;
+    width: 420px;
     margin: auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.219);
 }
