@@ -3,13 +3,13 @@
 var c = 1
 while (c <= 4){
     console.log('Tudo bem?')
-    c++ //C = c + 1
+    c++ //c = c + 1
 }
 
 //contando passos  *repare que ao exercutar (F8) ele não começa do 1, isso porquê os primeiros passos foram o do laço acima...  
 while (c <= 9){
     console.log(`Passo ${c}`)
-    c++ //C = c + 1
+    c++ //c = c + 1
 }
 
 // Estrutura de repetição com teste lógico no final *no terminal a contagem começa em 1 até 6, já que usamos outra var (c2)
