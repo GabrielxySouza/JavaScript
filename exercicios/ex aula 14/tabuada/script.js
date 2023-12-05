@@ -1,13 +1,18 @@
 function gerar(){
     var num = document.getElementById('inum')
-    var num = Number(num.value)
     var tab = document.getElementById('itab')
-    var most = document.getElementById('most')
-    var c = 1
-    tab == num*c
-    while(c <= 10){
-        most.innerHTML = `${c} x ${num} = ${tab}`
-        tab =  num*c
-        c++
-    }
-} 
+    if(num.value.length == 0){
+        window.alert('Digite um número!')
+    }else{
+        var n = Number(num.value)
+        var c = 1
+        tab.innerHTML = '' //limpa a tabuada antes de começar o processo *para que em uma segunda tabuada não fique gerando abaixo da anterior
+        while(c <= 10){
+            let most = document.createElement('option')
+            most.text = `${n} x ${c} = ${n*c}`
+            most.value = `tab${c}`//valor de cada item da tabela
+            tab.appendChild(most)
+            c++
+        }
+    }  
+}  
