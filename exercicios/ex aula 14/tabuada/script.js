@@ -1,13 +1,13 @@
 function gerar(){
     var num = document.getElementById('inum')
-    num = Number()
+    var num = Number(num.value)
     var tab = document.getElementById('itab')
     var most = document.getElementById('most')
     var c = 1
-    tab == num
+    tab == num*c
     while(c <= 10){
-        most.innerHTML = `${num} x ${c} = ${tab}`
-        tab = num*c
+        most.innerHTML = `${c} x ${num} = ${tab}`
+        tab =  num*c
         c++
     }
-}
+} 
