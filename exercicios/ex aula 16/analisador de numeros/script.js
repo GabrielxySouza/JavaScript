@@ -4,7 +4,7 @@ let res = document.querySelector('div#res')
 let valores = []
 
 function isNumero(n){
-    if(Number(n) >= 1 && Number (n) <= 100){
+    if(Number(n) >= 1 && Number (n) <= 100){ //teste se número está entre 1 e 100
         return true
     }else{
         return false
@@ -12,7 +12,7 @@ function isNumero(n){
 }
 
 function inLista(n, l) {
-    if(l.indexOf(Number(n)) != -1) {
+    if(l.indexOf(Number(n)) != -1) { //teste para saber se o número está na lista
         return true
     }else{
         return false
@@ -20,7 +20,7 @@ function inLista(n, l) {
 }
 
 function adicionar(){ 
-    if(isNumero(num.value) && !inLista(num.value, valores)){
+    if(isNumero(num.value) && !inLista(num.value, valores)){ //colocando os valores no vetor e na lista
         valores.push(Number(num.value))
         let item = document.createElement('option')
         item.text = `Valor ${num.value} adicionado.`
@@ -33,7 +33,7 @@ function adicionar(){
     num.focus()
 }
 
-function finalizar(){
+function finalizar(){ //finalizando, analisando e mostrando dados
     if(valores.length == 0){
         window.alert('Adicione valores antes de finalizar!')
     }else{
